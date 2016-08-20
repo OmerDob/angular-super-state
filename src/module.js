@@ -1,3 +1,1 @@
-'use strict';
-
-angular.module('ngSuperState', []);
+angular.module('SuperState', []);
