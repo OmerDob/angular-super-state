@@ -1,0 +1,19 @@
+{
+  "name": "angular-super-state",
+  "version": "1.0.0",
+  "description": "An angular module to handle SPA state and proccesses.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/OmerDob/angular-super-state.git"
+  },
+  "author": "Omer Dobzinsky",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/OmerDob/angular-super-state/issues"
+  },
+  "homepage": "https://github.com/OmerDob/angular-super-state#readme"
+}
