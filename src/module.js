@@ -1,1 +1,1 @@
-angular.module('SuperState', []);
+angular.module('superState', []);

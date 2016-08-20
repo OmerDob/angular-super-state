@@ -1,10 +1,25 @@
-<html>
+<html ng-app="superStateDemo">
     <head>
         <title>Angular Super State Demo App</title>
     </head>
     <body>
+        <div>
+            This is the app's menu<br />
+            <a href="#/">welcome</a> | <a href="#/faq">faq</a>
+            <hr />
+        </div>
+
+        <ng-view></ng-view>
         
         <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js"></script>
+        <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular-route.min.js"></script>
+        
         <script type="text/javascript" src="/super-state.min.js"></script>
+
+        <script type="text/javascript" src="/scripts/app.js"></script>
+        <script type="text/javascript" src="/scripts/app.routes.js"></script>
+
+        <script type="text/javascript" src="/scripts/components/welcome/welcome.component.js"></script>
+        <script type="text/javascript" src="/scripts/components/faq/faq.component.js"></script>
     </body>
 </html>
