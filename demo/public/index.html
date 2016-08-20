@@ -3,9 +3,9 @@
         <title>Angular Super State Demo App</title>
     </head>
     <body>
-        <div>
+        <div ng-controller="menu as ctrl">
             This is the app's menu<br />
-            <a href="#/">welcome</a> | <a href="#/faq">faq</a>
+            <a href ng-click="ctrl.showWelcome()">welcome</a> | <a href ng-click="ctrl.showFaq()">faq</a>
             <hr />
         </div>
 
@@ -18,6 +18,8 @@
 
         <script type="text/javascript" src="/scripts/app.js"></script>
         <script type="text/javascript" src="/scripts/app.routes.js"></script>
+
+        <script type="text/javascript" src="/scripts/controllers/menu.controller.js"></script>
 
         <script type="text/javascript" src="/scripts/components/welcome/welcome.component.js"></script>
         <script type="text/javascript" src="/scripts/components/faq/faq.component.js"></script>

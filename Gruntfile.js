@@ -29,7 +29,8 @@ module.exports = function (grunt) {
     grunt.loadNpmTasks('grunt-contrib-uglify');
 
     grunt.registerTask('build', 'Build the angular super state project.', function () {
-        grunt.task.run('concat:bin', 'uglify:bin');
+        grunt.task.run('concat:bin');
+        grunt.task.run('uglify:bin');
     });
 
 };
