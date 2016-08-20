@@ -62,7 +62,7 @@ angular.module('superState').factory('SuperStateService', ['$location', function
     // Service API
     return {
         addState: addState,
-        currentState: _currentState,
+        currentState: getState(_currentState),
         goTo: goTo
     };
 
