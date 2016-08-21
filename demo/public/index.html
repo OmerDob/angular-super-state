@@ -5,7 +5,8 @@
     <body>
         <div ng-controller="menu as ctrl">
             This is the app's menu<br />
-            <a href ng-click="ctrl.showWelcome()">welcome</a> | <a href ng-click="ctrl.showFaq()">faq</a>
+            <a href ng-click="ctrl.showWelcome()">welcome</a> | <a href ng-click="ctrl.showFaq()">faq</a> | 
+            <a href ng-click="ctrl.createThing()">create a thing</a> | <a href ng-click="ctrl.showThings()">show all things</a>
             <hr />
         </div>
 
@@ -19,9 +20,13 @@
         <script type="text/javascript" src="/scripts/app.js"></script>
         <script type="text/javascript" src="/scripts/app.routes.js"></script>
 
+        <script type="text/javascript" src="/scripts/services/thing.service.js"></script>
+
         <script type="text/javascript" src="/scripts/controllers/menu.controller.js"></script>
 
         <script type="text/javascript" src="/scripts/components/welcome/welcome.component.js"></script>
         <script type="text/javascript" src="/scripts/components/faq/faq.component.js"></script>
+        <script type="text/javascript" src="/scripts/components/thing/thing.component.js"></script>
+        <script type="text/javascript" src="/scripts/components/show-things/show-things.component.js"></script>
     </body>
 </html>

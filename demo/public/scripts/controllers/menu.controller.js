@@ -8,4 +8,12 @@ angular.module('superStateDemo').controller('menu', function (SuperStateService)
     this.showFaq = function () {
         SuperStateService.goTo('faq');
     };
+
+    this.createThing = function () {
+        SuperStateService.goTo('createThing');
+    }
+
+    this.showThings = function () {
+        SuperStateService.goTo('showThings');
+    }
 });
