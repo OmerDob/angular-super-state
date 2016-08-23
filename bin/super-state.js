@@ -19,12 +19,20 @@ angular.module('superState').factory('SuperStateService', ['$location', function
         if (route) {
             this._route = route;
             return this;
-        }
-        else {
+        } else {
             if (this._route)
                 return this._route;
 
             return this.name;
+        }
+    }
+
+    State.prototype.expectParams = function (paramCount) {
+        if (paramCount) {
+            this._paramCount = paramCount;
+            return this;
+        } else {
+            return this._paramCount;
         }
     }
 
@@ -45,16 +53,30 @@ angular.module('superState').factory('SuperStateService', ['$location', function
         return null;
     }
 
+    function buildRoutePath() {
+        var res = Array.prototype.slice.call(arguments).join('/');
+
+        if (res.charAt(0) != '/')
+            res = '/' + res;
+
+        return res;
+    }
+
     function goTo(state) {
         if (_currentState != state) {
             var stateObj = getState(state);
 
             if (!stateObj) {
-                console.error('State: \'' + state + '\' undefined.');
-            }
-            else {
+                throw 'State: "' + state + '" undefined.';
+            } else {
+                if (stateObj.expectParams() && stateObj.expectParams() != arguments.length - 1)
+                    throw 'State: "' + state + '" expects ' + stateObj.expectParams() + ' parameters.';
+
                 _currentState = state;
-                $location.path('/' + stateObj.route().replace(/^\//, ''));
+                var params = Array.prototype.slice.call(arguments);
+                params.shift();
+                params.unshift(stateObj.route());
+                $location.path(buildRoutePath.apply(null, params));
             }
         }
     }

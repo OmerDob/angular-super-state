@@ -8,4 +8,7 @@ angular.module('superStateDemo', ['ngRoute', 'superState']).run(function (SuperS
         .route('thing');
     SuperStateService.addState('showThings')
         .route('show-things');
+    SuperStateService.addState('editThing')
+        .route('thing')
+        .expectParams(1);
 });
